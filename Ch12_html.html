@@ -688,10 +688,10 @@ independent)</p></li>
 </ul>
 <p><br></p>
 <p>For our example, a significant association would indicate that
-cognitive performance and social status are associated. However, this
-does not necessarily implies that a lower social status <em>causes</em>
-monkeys to performs poorly because the contingency test says nothing
-about causality.</p>
+cognitive performance and social status are not independent However,
+this does not necessarily implies that a lower social status
+<em>causes</em> monkeys to perform poorly because the contingency test
+says nothing about causality.</p>
 <p><br></p>
 <p>The <span class="math inline">\(\chi^2\)</span> statistic is defined
 as <span class="math display">\[
@@ -761,7 +761,7 @@ because it has 2 rows and 2 columns. In this case, our response variable
 explanatory variable (social status) is positioned across columns. The
 data is based on <em>N</em> = 80 monkeys (the sum of all categories in
 the table). Note that at this point we already have the information to
-input the <em>Observed(row,column)</em> term in the <span class="math inline">\(\chi^2\)</span> statistic equation above. For
+input the <em>Observed(row,column)</em> terms in the <span class="math inline">\(\chi^2\)</span> statistic equation above. For
 example, the observed frequency of healthy monkeys of high status
 (position row=1 and column=1 in the contingency table or
 <em>Observed(1,1)</em> in the <span class="math inline">\(\chi^2\)</span> equation) is 37.</p>
@@ -820,7 +820,7 @@ independence</strong></p>
 columns.</p>
 <p><br></p>
 <p>First, estimate the sample size of each group of your data. Note that
-the total sample size is <em>N</em> = 80 monkeys.</p>
+the total (global) sample size is <em>N</em> = 80 monkeys.</p>
 <center>
 <table class="table table-striped" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
@@ -889,9 +889,9 @@ N = 80 monkeys
 <p><strong>Step B.</strong> Estimate probabilities across
 categories.</p>
 <p><br></p>
-<p>Let’s estimate the probability that a randomly sampled monkey is
-healthy and of high status (i.e., position row=1, column=1 in the
-contingency table). <span class="math display">\[
+<p>First, estimate the probability that a randomly sampled monkey is
+healthy. Second, estimate the probability that a randomly sampled monkey
+is of high social status. <span class="math display">\[
 \begin{aligned}
 \Pr[healthy]=46/80 =0.575 \\
 \Pr[high \ status]=40/80 =0.500
@@ -903,7 +903,11 @@ occurring at the same time.</p>
 <p><br></p>
 <p>Note that for each position in the contingency table, two events must
 occur. Because this involves an <em>and statement</em> in probability,
-we need to use the multiplication rule. <span class="math display">\[
+we need to use the multiplication rule.</p>
+<p><br></p>
+<p>Estimate the probability that a randomly sampled monkey is healthy
+<em>and</em> of high status (i.e., position row=1, column=1 in the
+contingency table). <span class="math display">\[
 \Pr[healthy \ and \ high \ status]=0.575 * 0.500 =0.288
 \]</span></p>
 <p><br></p>
@@ -965,7 +969,7 @@ Unhealthy
 </table>
 </center>
 <p><br></p>
-<p>If you do the same step for the other three position in the
+<p>If you do the same steps for the other three positions in the
 contingency table, you will obtain the following expected
 frequencies:</p>
 <p><br></p>
@@ -1015,8 +1019,8 @@ Unhealthy
 <p><br></p>
 <p>Note that the fact that frequencies across rows are identical in this
 example does not mean that they will always be identical. However,
-samples sizes across groups must be identical to your observed
-frequencies.</p>
+samples sizes across groups, as well as the global <em>N</em>, must be
+identical to your observed frequencies.</p>
 <p><br></p>
 <p><strong>2. Estimating the <span class="math inline">\(\chi^2\)</span>
 statistic</strong></p>
@@ -1039,16 +1043,17 @@ null distribution. Here, they are defined as <span class="math display">\[
 \]</span> where nrow and ncolumn represent the number of rows and
 columns, respectively. In this way, a 2 <em>x</em> 2 contingency table
 analysis will always have <em>df</em> = 1. We need to use the <span class="math inline">\(\chi^2\)</span> distribution with 1 degree of
-freedom as the null distribution to estimate the <em>p</em>-value. After
-revising the statistical table, the critical <span class="math inline">\(\chi^2\)</span> at a significance level = 0.05 is
-3.84.</p>
+freedom as the null distribution to estimate the range of the
+<em>p</em>-value. After revising the statistical table, the critical
+<span class="math inline">\(\chi^2\)</span> at a significance level =
+0.05 is 3.84.</p>
 <p><br></p>
 <p><strong>4. Conclusions</strong></p>
 <p><br></p>
 <p>Because our calculated <span class="math inline">\(\chi^2\)</span> is
 more extreme than the critical <span class="math inline">\(\chi^2\)</span>, we reject the null hypothesis and
-conclude that the expected frequencies of healthy monkeys of high social
-status are different from the observed ones (<span class="math inline">\(\chi^2\)</span> = 40.1, df =1,
+conclude that the expected frequencies of monkeys across health state
+and social status are different from the observed ones (<span class="math inline">\(\chi^2\)</span> = 40.1, df =1,
 <em>p</em>&lt;0.05). We reject the null hypothesis.</p>
 <p><br></p>
 </div>
